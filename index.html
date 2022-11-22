@@ -20,12 +20,46 @@
         rel="stylesheet">
     <!-- add this line to template -->
     <!-- Style -->
+    <!-- Vendor CSS  -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+    <!-- bootstrap icons -->
+    <!-- we can also use them locally  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <!-- Main CSS -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <title>Construction</title>
 </head>
+<!-- body header main footer goes together -->
 
 <body>
+    <!--===== Header ======-->
+    <header>
+        <!-- container-fluid takes 100% width container has a max width. Here container-fluid seems useless -->
+        <nav class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <a href="/">
+                <h1>Construction<span>.</span></h1>
+            </a>
+            <!-- what's mobile-nav-toggle  -->
+            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+            <i class="mobile-nav-toggle mobile-nav-hide d-none  bi bi-x"></i>
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container-xl"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias commodi perspiciatis
+            sed. Labore aspernatur odio rem corporis, voluptatibus repellat iure unde eligendi! Deleniti et non minima
+            placeat quo perspiciatis! Impedit! </div>
+    </main>
+    <footer>
+        <div class="container-xl"></div>
+    </footer>
 </body>
 
 </html>
