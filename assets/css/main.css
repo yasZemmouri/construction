@@ -64,6 +64,16 @@ header {
     padding-right: 10px;
 }
 
+main {
+    flex: 1 1;
+    /* background-color: aqua; */
+}
+
+footer {
+    height: 60px;
+    background-color: aquamarine;
+}
+
 h1 {
     font-size: 24px;
     font-weight: bold;
@@ -154,34 +164,53 @@ nav {
         width: 100%;
     }
 
-    .mobile-nav-show {
-        /* position: relative; */
+    /* active focus what's for? */
+    /* what is focus?? */
+    nav a:hover,
+    nav .active,
+    nav .active:focus,
+    nav li:hover>a {
         color: white;
-        font-size: 28px;
-        cursor: pointer;
-        transition: .5s;
-        /* why line-height:0  */
-        line-height: 0;
-        padding-right: 10px;
     }
 
+    .mobile-nav-show,
     .mobile-nav-hide {
-        color: white;
-        font-size: 32px;
-        cursor: pointer;
-        line-height: 0;
-        transition: .5s;
+        display: none;
+    }
+}
+
+/*--------- Mobile Navigation -----------*/
+@media(max-width:1279px) {
+    .navbar {
+        background-color: green;
+
         position: fixed;
-        right: 20px;
-        top: 20px;
+        top: 0;
+        /* right: -100%; */
+        width: 100%;
+        bottom: 0;
     }
 
-    main {
-        flex: 1 1;
-        /* background-color: aqua; */
-    }
+}
 
-    footer {
-        height: 60px;
-        background-color: aquamarine;
-    }
+.mobile-nav-show {
+    /* position: relative; */
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    transition: .5s;
+    /* why line-height:0  */
+    line-height: 0;
+    padding-right: 10px;
+}
+
+.mobile-nav-hide {
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+    line-height: 0;
+    transition: .5s;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+}
