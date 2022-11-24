@@ -56,13 +56,15 @@ h6 {
 /*=============== Header  ===============*/
 header {
     background-color: var(--color-default);
-    /* position: absolute; */
+    position: absolute;
     left: 0;
     top: 0;
     right: 0;
     height: 50px;
     /* color: white; */
     padding-right: 10px;
+    /* why???*/
+    /* z-index: 997; */
 }
 
 main {
@@ -189,12 +191,13 @@ h1 span {
         max-width: 400px;
         transition: .3s;
         bottom: 0;
+        z-index: 9997;
     }
 
     .navbar ul {
         /* absolute is to use inset property  */
+        /* absolute is to use z-index to make the up on top of the screen that prevent the scrolling; */
         position: absolute;
-        /* what's inset? */
         /* inset is a shorthand for top bottom left right  */
         /* top: 0; right: 0; bottom: 0; left: 0; */
         /* This is a west of time. where merging the up with .navbar we could have just give .navbar to ul no need for the extra element */
@@ -208,6 +211,7 @@ h1 span {
         overflow-y: auto;
         background-color: rgb(0 0 0 /.8);
         transition: .3s;
+        z-index: 9998;
     }
 
     .navbar a,
@@ -255,11 +259,27 @@ h1 span {
         position: fixed;
         right: 20px;
         top: 20px;
+        z-index: 9999;
     }
 
-    /* a class that will be added by main.js for some reason */
+    /* a class that will be added by main.js to move navbar from -100 right to 0 right*/
     .mobile-nav-active {
         overflow: hidden;
+    }
+
+    .mobile-nav-active .navbar {
+        right: 0;
+    }
+
+    /* I have no idea what is this  */
+    /* Looks like it's to prevent me from clicking?? but why?? */
+    /* prevent scrolling? */
+    .mobile-nav-active .navbar::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 9996;
     }
 
 
