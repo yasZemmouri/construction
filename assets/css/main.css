@@ -280,6 +280,7 @@ h1 span {
         inset: 0;
         background-color: rgba(0, 0, 0, 0.6);
         z-index: 9996;
+        backdrop-filter: blur(2px);
     }
 
 
