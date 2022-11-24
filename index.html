@@ -33,24 +33,26 @@
 
 <body>
     <!--===== Header ======-->
-    <header>
+    <header class="d-flex align-items-center">
         <!-- container-fluid takes 100% width container has a max width. Here container-fluid seems useless -->
-        <nav class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <div class="container-xl d-flex align-items-center justify-content-between">
             <a href="/">
                 <h1>Construction<span>.</span></h1>
             </a>
-            <!-- what's mobile-nav-toggle  -->
+            <!-- what's mobile-nav-toggle class? -->
             <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
             <i class="mobile-nav-toggle mobile-nav-hide d-none  bi bi-x"></i>
-            <ul class="navbar">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <div class="container-xl"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias commodi perspiciatis

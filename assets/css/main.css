@@ -53,6 +53,7 @@ h6 {
     font-family: var(--font-primary);
 }
 
+/*=============== Header  ===============*/
 header {
     background-color: var(--color-default);
     /* position: absolute; */
@@ -86,26 +87,22 @@ h1 span {
     color: var(--color-primary);
 }
 
-nav {
-    height: 100%;
-}
-
 /*----====== Desktop Navigation  =======----*/
 @media(min-width: 1280px) {
     .navbar {
         padding: 0
     }
 
-    nav ul {
+    .navbar ul {
         /* cancel bootstrap ul margin-bottom and padding-left  */
         margin: 0;
         padding: 0;
-        /* display: flex; */
+        display: flex;
         list-style-type: none;
-        /* align-items: center; */
+        align-items: center;
     }
 
-    nav ul>li {
+    .navbar>ul>li {
         white-space: nowrap;
         padding: 10px 0 10px 28px;
     }
@@ -113,7 +110,7 @@ nav {
     .navbar a,
     .navbar a:focus {
         /* why focus?  */
-        /* display: flex; */
+        display: flex;
         /* align-items: center; */
         /* justify-content: space-between; */
         /* to make the underline a little wider  */
@@ -124,7 +121,7 @@ nav {
         font-weight: 500;
         color: rgba(255, 255, 255, 0.6);
         text-transform: uppercase;
-        white-space: nowrap;
+        /* white-space: nowrap; */
         transition: .3s;
         /* position relative to position the underline */
         position: relative;
@@ -139,7 +136,7 @@ nav {
         margin-left: 5px;
     } */
     /* width: 100%, width: 0; transition visibility: hidden */
-    nav ul>li>a::before {
+    .navbar>ul>li>a::before {
         content: "";
         position: absolute;
         background-color: var(--color-primary);
@@ -156,20 +153,20 @@ nav {
     }
 
     /* .active??  */
-    nav ul>li:hover>a::before,
-    nav ul>li>a:hover::before,
-    nav .active::before {
+    .navbar ul>li:hover>a::before,
+    .navbar ul>li>a:hover::before,
+    .navbar .active::before {
         visibility: visible;
-        /* why do we need width: 100% here?? */
+        /* why do we need width: 100% here. why width 100% up doesn't work?? */
         width: 100%;
     }
 
     /* active focus what's for? */
     /* what is focus?? */
-    nav a:hover,
-    nav .active,
-    nav .active:focus,
-    nav li:hover>a {
+    .navbar a:hover,
+    .navbar .active,
+    .navbar .active:focus,
+    .navbar li:hover>a {
         color: white;
     }
 
@@ -186,31 +183,84 @@ nav {
 
         position: fixed;
         top: 0;
-        /* right: -100%; */
+        right: -100%;
+        bottom: 0;
         width: 100%;
+        max-width: 400px;
+        transition: .3s;
         bottom: 0;
     }
 
-}
+    .navbar ul {
+        /* absolute is to use inset property  */
+        position: absolute;
+        /* what's inset? */
+        /* inset is a shorthand for top bottom left right  */
+        /* top: 0; right: 0; bottom: 0; left: 0; */
+        /* This is a west of time. where merging the up with .navbar we could have just give .navbar to ul no need for the extra element */
+        inset: 0;
+        /* we can put padding: 50px 0 10px; */
+        padding: 50px 0 10px 0;
+        /* cancel some margin from vendor  */
+        margin: 0;
+        /* why?? */
+        /* add scroll bars if content overflows */
+        overflow-y: auto;
+        background-color: rgb(0 0 0 /.8);
+        transition: .3s;
+    }
 
-.mobile-nav-show {
-    /* position: relative; */
-    color: white;
-    font-size: 28px;
-    cursor: pointer;
-    transition: .5s;
-    /* why line-height:0  */
-    line-height: 0;
-    padding-right: 10px;
-}
+    .navbar a,
+    .navbar a:focus {
+        /* makes no sens? */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        /* this may be useless */
+        font-family: var(--font-primary);
+        font-size: 15px;
+        font-weight: 500;
+        color: rgb(255 255 255 /0.7);
+        white-space: nowrap;
+        text-transform: uppercase;
+        /* why this transition?? seems useless */
+        transition: .3s;
+    }
 
-.mobile-nav-hide {
-    color: white;
-    font-size: 32px;
-    cursor: pointer;
-    line-height: 0;
-    transition: .5s;
-    position: fixed;
-    right: 20px;
-    top: 20px;
+    /* same as desctop. we can do it just once .navbar a:hover, */
+    .navbar .active,
+    .navbar .active:focus,
+    .navbar li:hover>a {
+        color: #fff;
+    }
+
+    .mobile-nav-show {
+        /* position: relative; */
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+        transition: .5s;
+        /* why line-height:0  */
+        line-height: 0;
+        padding-right: 10px;
+    }
+
+    .mobile-nav-hide {
+        color: white;
+        font-size: 32px;
+        cursor: pointer;
+        line-height: 0;
+        transition: .5s;
+        position: fixed;
+        right: 20px;
+        top: 20px;
+    }
+
+    /* a class that will be added by main.js for some reason */
+    .mobile-nav-active {
+        overflow: hidden;
+    }
+
+
 }
