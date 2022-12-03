@@ -53,9 +53,17 @@ h6 {
     font-family: var(--font-primary);
 }
 
+/* Section & Section Header  */
+section {
+    padding: 80px 0;
+    /* why overflow hidden */
+    overflow: hidden;
+}
+
 /*=============== Header  ===============*/
 header {
     background-color: var(--color-default);
+    /* absolute to use z-index to put it over the hero.  */
     position: absolute;
     left: 0;
     top: 0;
@@ -64,7 +72,7 @@ header {
     /* color: white; */
     padding-right: 10px;
     /* why???*/
-    /* z-index: 997; */
+    z-index: 997;
 }
 
 main {
@@ -289,9 +297,23 @@ h1 span {
 /* I see no reason for this  */
 #hero {
     background-color: yellow;
+    /* this may be for the carousel */
     /*overflow-x: hidden;*/
-    /* padding: 0; */
+    /* This padding 0 otherwise the carousel with height 100vh is going to be pushed down by 80px then it will enlarge the hero another 80px*/
+    padding: 0;
 
+}
+
+/* I think this will be added by bootstrap js to hold carousel */
+#hero .carousel {
+    width: 100%;
+    min-height: 100vh;
+    /* why did we give the padding to carousel instead of keeping section padding  */
+    /* so far I don't need it */
+    /* padding: 80px 0; */
+    margin: 0;
+    /* position relative keep the element in the stream */
+    position: relative;
 }
 
 #hero .info {
@@ -366,4 +388,46 @@ h1 span {
 
 #hero .info .btn-get-started:hover {
     background-color: var(--color-primary);
+}
+
+/* Get Started Section  */
+#get-started .content {
+    padding: 30px 0;
+}
+
+#get-started .content h3 {
+    font-size: 36px;
+    color: var(--color-secondary);
+    font-weight: 600;
+    /* why he combine margin and padding?? */
+    /* padding-bottom is the space between he h3 and its horizontal line  */
+    padding-bottom: 25px;
+    /* margin-bottom is the space between the horizontal line and the paragraph */
+    margin-bottom: 25px;
+
+    /* This means we will use after or before with absolute */
+    position: relative;
+}
+
+#get-started .content h3::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-primary);
+    left: 0;
+    bottom: 0;
+
+}
+
+#get-started .content p {
+    font-size: 14px;
+}
+
+#get-started .php-email-form {
+    background-color: rosybrown;
+    padding: 30px;
+    /* why height: 100% */
+    /* height: 100%; */
 }
