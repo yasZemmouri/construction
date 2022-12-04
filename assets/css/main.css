@@ -64,6 +64,48 @@ section {
     background-color: #f5f6f7;
 }
 
+/* Some sections have a centred header with h and p */
+.section-header {
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    position: relative;
+    color: #2e3135;
+}
+
+.section-header h2::before,
+.section-header h2::after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: var(--color-primary);
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.section-header p {
+    margin: 0 auto;
+}
+
+@media (min-width: 1199px) {
+    .section-header p {
+        max-width: 60%;
+    }
+}
+
+.section-header h2::before {
+    margin-right: 15px;
+}
+
+.section-header h2::after {
+    margin-left: 15px;
+}
+
 /*=============== Header  ===============*/
 header {
     background-color: var(--color-default);
@@ -461,4 +503,116 @@ h1 span {
 #get-started .php-email-form input:focus,
 #get-started .php-email-form textarea:focus {
     border-color: var(--color-primary);
+}
+
+#get-started .php-email-form .loading {
+    /* display: none; */
+    background-color: white;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 24px;
+}
+
+#get-started .php-email-form .loading::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 3px solid #059652;
+    border-top-color: white;
+    border-radius: 50%;
+    /* -6 bottom push it down  */
+    margin: 0 10px -6px 0;
+    /* what is this for?? */
+    -webkit-animation: animate-loading 1s linear infinite;
+    animation: animate-loading 1s linear infinite;
+}
+
+@-webkit-keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#get-started .php-email-form .error-message {
+    display: none;
+    color: white;
+    background-color: #df1529;
+    text-align: left;
+    padding: 15px;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+#get-started .php-email-form .sent-message {
+    display: none;
+    color: white;
+    background-color: #059652;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+#get-started .php-email-form button[type='submit'] {
+    background-color: var(--color-primary);
+    border: 0;
+    padding: 10px 30px;
+    color: white;
+    transition: .4s;
+    border-radius: 4px;
+}
+
+#get-started .php-email-form button[type='submit']:hover {
+    opacity: 0.8;
+    /* background-color: rgba(254, 185, 0, 0.8) */
+}
+
+/* Constructions Section  */
+#constructions .card-item {
+    border: 1px solid rgba(82, 86, 94, .2);
+    background-color: white;
+    /* why the position is relative?  */
+    /* position: relative; */
+    border-radius: 0;
+}
+
+#constructions .card-item .card-bg {
+    min-height: 300px;
+    background-size: cover;
+    /* what's background-position cover??? */
+    /* background-position: cover; */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#constructions .card-item .card-body {
+    padding: 30px;
+}
+
+#constructions .card-item h4 {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--color-secondary);
+}
+
+#constructions .card-item p {
+    color: var(--color-secondary);
+    /* whe don't need bottom margins  */
+    margin: 0;
 }
