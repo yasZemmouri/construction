@@ -670,7 +670,7 @@ h1 span {
     color: var(--color-default);
     font-weight: bold;
     margin: 0 0 20px 0;
-    /* why padding-bottom if we have margin  */
+    /* padding bottom is the distance between the text and the border-bttom */
     padding-bottom: 8px;
     font-size: 22px;
     /* why relative  */
