@@ -65,7 +65,7 @@ section {
     /* opacity: 0.2; */
     /* background-color: #0c7eef; */
     opacity: 1;
-    background-image: linear-gradient(45deg, rgb(249, 249, 249) 50%, #f5f6f7 50%);
+    background-image: linear-gradient(45deg, rgb(245, 245, 245) 50%, #f5f6f7 50%);
     background-size: 4px 4px;
 }
 
@@ -620,4 +620,84 @@ h1 span {
     color: var(--color-secondary);
     /* whe don't need bottom margins  */
     margin: 0;
+}
+
+/*------------- Services Section  --------------*/
+#services .service-item {
+    padding: 40px;
+    background: white;
+    /* maybe I will not need it  */
+    /* height: 100%;*/
+}
+
+#services .service-item .icon {
+    /* why not letting the child decide the w and h??? */
+    width: 48px;
+    height: 48px;
+    /* why?  */
+    position: relative;
+    margin-bottom: 50px;
+
+}
+
+#services .service-item .icon i {
+    color: var(--color-secondary);
+    font-size: 40px;
+    transition: ease-in-out .3s;
+    /* to be in front of the icon::before */
+    /* position relative to give it a z-index and make it on top of the circle  */
+    position: relative;
+    z-index: 2;
+    /* why line height?? */
+    /* a big line-height makes it look like it's absolute */
+    line-height: 1.8;
+}
+
+#services .service-item .icon::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #f0f1f2;
+    border-radius: 50px;
+    /* to be behind icon i  */
+    z-index: 1;
+    top: 10px;
+    right: -15px;
+}
+
+#services .service-item h3 {
+    color: var(--color-default);
+    font-weight: bold;
+    margin: 0 0 20px 0;
+    /* why padding-bottom if we have margin  */
+    padding-bottom: 8px;
+    font-size: 22px;
+    /* why relative  */
+    position: relative;
+    /* inline-block is to make the border-bottom line as long as the text. Sice on block it would've taken the whole line*/
+    display: inline-block;
+    border-bottom: 4px solid #ebebed;
+    transition: .3s;
+}
+
+#services .service-item p {
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+#services .service-item .readmore {
+    margin-top: 15px;
+    /* Inline block to activate the margin-top elemntens don't respect inline margins */
+    display: inline-block;
+    color: var(--color-primary);
+}
+
+#services .service-item:hover .icon::before {
+    background-color: var(--color-primary);
+}
+
+#services .service-item:hover h3 {
+    border-color: var(--color-primary);
 }
