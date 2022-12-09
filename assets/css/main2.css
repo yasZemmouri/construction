@@ -759,3 +759,26 @@ h1 span {
     background-color: var(--color-primary);
     color: white;
 }
+
+#alt-services .icon-box h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#alt-services .icon-box h4 a {
+    color: black;
+    transition: .3s;
+}
+
+#alt-services .icon-box h4 a:hover {
+    color: var(--color-primary);
+
+}
+
+#alt-services .icon-box p {
+    line-height: 24px;
+    font-size: 14px;
+    /* this margin doens't seem important  */
+    margin-bottom: 0;
+}
