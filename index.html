@@ -27,6 +27,9 @@
     <!-- bootstrap icons -->
     <!-- we can also use them locally  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <!-- AOS liberary -->
+    <!-- <link rel="stylesheet" href="assets/vendor/aos/aos.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/main2.css">
     <title>Construction</title>
@@ -66,10 +69,12 @@
                     <!-- justify-content-center to center the col-lg-6  -->
                     <!-- col-lg-6 takes half the container space and 100% under 960px -->
                     <div class="col-lg-6 text-center">
-                        <h2>Welcome to <span>Construction</span></h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam consectetur possimus
-                            delectus beatae voluptates vitae reiciendis eligendi, quod eos ullam aspernatur iure.</p>
-                        <a href="#get-started" class="btn-get-started">Get Started</a>
+                        <h2 data-aos="fade-down">Welcome to <span>Construction</span></h2>
+                        <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam
+                            consectetur possimus delectus beatae voluptates vitae reiciendis eligendi, quod eos ullam
+                            aspernatur iure.</p>
+                        <a href="#get-started" class="btn-get-started" data-aos="fade-up" data-aos-delay="200">Get
+                            Started</a>
                     </div>
                 </div>
             </div>
@@ -82,7 +87,7 @@
         <section id="get-started" class="section-bg">
             <div class='container-xl'>
                 <div class="row justify-content-between gy-4">
-                    <div class="col-lg-6 d-flex align-items-center">
+                    <div class="col-lg-6 d-flex align-items-center" data-aos="fade-up">
                         <div class="content">
                             <h3>Lorem ipsum dolor sit am</h3>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic nihil ab dignissimos, ea in
@@ -92,7 +97,8 @@
                                 debitis.</p>
                         </div>
                     </div>
-                    <div class="col-lg-5">
+                    <!-- fade: appear or disappear slowly  -->
+                    <div class="col-lg-5" data-aos="fade">
                         <form action="forms/quote.php" method="post" class="php-email-form">
                             <h3>Get a quote</h3>
                             <p>Lorem ipsum adipisicing elit. Magnam, voluptatum? Molestiae saepe cumque sint deleniti,
@@ -127,14 +133,14 @@
         </section> <!-- End Get Started Section -->
         <!-- ======= Constructions Section ======= -->
         <section id="constructions">
-            <div class='container-xl'>
+            <div class='container-xl' data-aos="fade-up">
                 <div class="section-header">
                     <h2>Constructions</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis minima error natus accusamus
                         quasi sit odit nam ducimus architecto, voluptates aut! Aperiam.</p>
                 </div>
                 <div class="row gy-4">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="card-item">
                             <div class="row">
                                 <div class="col-xl-5">
@@ -155,7 +161,7 @@
                             </div>
                         </div>
                     </div><!-- End Card Item -->
-                    <div class="col-lg-6">
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="card-item">
                             <div class="row">
                                 <div class="col-xl-5">
@@ -176,7 +182,7 @@
                             </div>
                         </div>
                     </div><!-- End Card Item -->
-                    <div class="col-lg-6">
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="card-item">
                             <div class="row">
                                 <div class="col-xl-5">
@@ -197,7 +203,7 @@
                             </div>
                         </div>
                     </div><!-- End Card Item -->
-                    <div class="col-lg-6">
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
                         <div class="card-item">
                             <div class="row">
                                 <div class="col-xl-5">
@@ -222,14 +228,14 @@
         </section><!-- End of Constructions Section -->
         <!-- ======= Services Section ======= -->
         <section id="services" class="section-bg">
-            <div class='container-xl'>
+            <div class='container-xl' data-aos="fade-up">
                 <div class="section-header">
                     <h2>Services</h2>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis voluptatem dignissimos numquam
                         praesentium, quod distinctio quos null.</p>
                 </div>
                 <div class="row gy-4">
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="service-item">
                             <div class="icon">
                                 <!-- font awesome -->
@@ -243,7 +249,7 @@
                                     class="bi  bi-arrow-right"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="service-item">
                             <div class="icon">
                                 <!-- font awesome -->
@@ -257,7 +263,7 @@
                                     class="bi  bi-arrow-right"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="service-item">
                             <div class="icon">
                                 <!-- font awesome -->
@@ -271,7 +277,7 @@
                                     class="bi  bi-arrow-right"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
                         <div class="service-item">
                             <div class="icon">
                                 <!-- font awesome -->
@@ -285,7 +291,7 @@
                                     class="bi  bi-arrow-right"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
                         <div class="service-item">
                             <div class="icon">
                                 <!-- font awesome -->
@@ -299,7 +305,7 @@
                                     class="bi  bi-arrow-right"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
                         <div class="service-item">
                             <div class="icon">
                                 <!-- font awesome -->
@@ -318,10 +324,11 @@
         </section>
         <!-- ======= Alt Services Section ======= -->
         <section id="alt-services">
-            <div class='container-xl'>
+            <div class='container-xl' data-aos="fade-up">
                 <div class="row justify-content-around gy-4">
                     <!-- this div has no dimentions -->
-                    <div class="col-lg-6 img-bg" style="background-image: url(assets/img/4.webp);"></div>
+                    <div class="col-lg-6 img-bg" style="background-image: url(assets/img/4.webp);" data-aos="zoom-in"
+                        data-aos-delay="100"></div>
                     <!-- why d-flex and flex-column -->
                     <div class="col-lg-5 d-flex flex-column justify-content-center">
                         <h3>Enim Pesto Kiko</h3>
@@ -332,7 +339,7 @@
                         <!-- why put the icon in a flex box -->
                         <!-- is it to center the icon inside the box??  -->
                         <!-- icon box contains 2 blocks the block with the icon and a block with h4 and p  -->
-                        <div class="icon-box d-flex">
+                        <div class="icon-box d-flex" data-aos="fade-up" data-aos-delay="100">
                             <i class="bi bi-easel flex-shrink-0"></i>
                             <div>
                                 <h4><a href="#" class="stretched-link">Lorem Ipsum</a></h4>
@@ -341,7 +348,7 @@
                                     mollitia harum quod!</p>
                             </div>
                         </div><!-- End Icon Box -->
-                        <div class="icon-box d-flex">
+                        <div class="icon-box d-flex" data-aos="fade-up" data-aos-delay="200">
                             <i class="bi bi-easel flex-shrink-0"></i>
                             <div>
                                 <h4><a href="#" class="stretched-link">Lorem Ipsum</a></h4>
@@ -350,7 +357,7 @@
                                     mollitia harum quod!</p>
                             </div>
                         </div><!-- End Icon Box -->
-                        <div class="icon-box d-flex">
+                        <div class="icon-box d-flex" data-aos="fade-up" data-aos-delay="300">
                             <i class="bi bi-easel flex-shrink-0"></i>
                             <div>
                                 <h4><a href="#" class="stretched-link">Lorem Ipsum</a></h4>
@@ -359,7 +366,7 @@
                                     mollitia harum quod!</p>
                             </div>
                         </div><!-- End Icon Box -->
-                        <div class="icon-box d-flex">
+                        <div class="icon-box d-flex" data-aos="fade-up" data-aos-delay="400">
                             <i class="bi bi-easel flex-shrink-0"></i>
                             <div>
                                 <h4><a href="#" class="stretched-link">Lorem Ipsum</a></h4>
@@ -390,6 +397,15 @@
     <footer>
         <div class="container-xl"></div>
     </footer>
+    <!-- JS files -->
+    <!-- Vendor JS files  -->
+    <!-- AOS JS file  -->
+    <!-- <script src="assets/vendor/aos/aos.js"></script> -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- Main js File -->
     <script src="assets/js/main.js"></script>
 </body>
 
