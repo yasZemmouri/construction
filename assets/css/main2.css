@@ -782,3 +782,8 @@ h1 span {
     /* this margin doens't seem important  */
     margin-bottom: 0;
 }
+
+/* Features Section  */
+#features .nav-tabs {
+    border: 0;
+}
