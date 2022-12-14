@@ -787,3 +787,50 @@ h1 span {
 #features .nav-tabs {
     border: 0;
 }
+
+#features .nav-link {
+    /* background-color: #059652; */
+    /* cancel padding from bootstrap and implement a new one  */
+    padding: 15px 0;
+    /* transition: .3s; */
+    color: var(--color-secondary);
+    /* cancel border-radius and border rules from bootstrap */
+    border-radius: 0;
+    border: 0;
+    /* I don't inderstand the flex So far. Text align center would have worked just fine  */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* I don't need this one. It' s centred vertically with the padding 15 */
+    /* align-items: center; */
+    /* I don't need cursor pointer. anchor tags have cursor pointer by default */
+    /* cursor: pointer; */
+    /* I don't know what height 100% is for  */
+    /* height: 100%; */
+    /* This is my code  */
+
+    text-align: center;
+    border-bottom: 4px solid #e2e4e6;
+}
+
+#features .nav-link h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+@media (max-width: 575px) {
+    #features .nav-link h4 {
+        font-size: 16px
+    }
+}
+
+#features .nav-link:hover {
+    color: var(--color-primary);
+}
+
+/* overriding bootstrap .nav-link.active rules  */
+#features .nav-link.active {
+    color: var(--color-primary);
+    background-color: transparent;
+    border-color: var(--color-primary);
+}
