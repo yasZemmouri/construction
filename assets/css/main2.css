@@ -932,3 +932,15 @@ footer .footer-content .footer-links ul a {
 footer .footer-content .footer-links ul a:hover {
     color: white;
 }
+
+footer .footer-legal .copyright {
+    padding-top: 30px;
+    border-top: 1px solid rgb(255 255 255 /.15);
+}
+
+footer .footer-legal .credits {
+    /* You also can use margin top  */
+    padding-top: 4px;
+    font-size: 13px;
+    /* color: white; */
+}
